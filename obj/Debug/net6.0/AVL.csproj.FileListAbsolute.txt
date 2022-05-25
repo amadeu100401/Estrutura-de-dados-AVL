@@ -1,0 +1,15 @@
+C:\Estrutura da dados\AVL\bin\Debug\net6.0\AVL.exe
+C:\Estrutura da dados\AVL\bin\Debug\net6.0\AVL.deps.json
+C:\Estrutura da dados\AVL\bin\Debug\net6.0\AVL.runtimeconfig.json
+C:\Estrutura da dados\AVL\bin\Debug\net6.0\AVL.dll
+C:\Estrutura da dados\AVL\bin\Debug\net6.0\ref\AVL.dll
+C:\Estrutura da dados\AVL\bin\Debug\net6.0\AVL.pdb
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.csproj.AssemblyReference.cache
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.AssemblyInfoInputs.cache
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.AssemblyInfo.cs
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.csproj.CoreCompileInputs.cache
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.dll
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\ref\AVL.dll
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.pdb
+C:\Estrutura da dados\AVL\obj\Debug\net6.0\AVL.genruntimeconfig.cache
