@@ -12,5 +12,5 @@
 </p>
 <h1> 🛠 Linguagem utilizada</h1>
 <p>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width="40" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="70" height="70"/>
 </p>
