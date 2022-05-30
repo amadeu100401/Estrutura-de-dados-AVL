@@ -6,7 +6,7 @@
 <p>
   <table>
   <tr>
-    <td align="center"><a href="https://github.com/amadeu100401"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54649985?v=4" width="100px;" alt=""/><br /><sub><b>Perfil git Amadeu Martim</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a><br/></td> <td align="center"><a href="https://github.com/PauloMBittencourt"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54875444?v=4" width="100px;" alt=""/><br /><sub><b>Perfil git Paulo Henrique</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a><br/></td>
+    <td align="center"><a href="https://github.com/amadeu100401"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54649985?v=4" width="100px;" alt=""/><br/>Amadeu Martim<br /><sub><b>Perfil git Amadeu Martim</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a><br/></td> <td align="center"><a href="https://github.com/PauloMBittencourt"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54875444?v=4" width="100px;" alt=""/><br/>Paulo Henrique<br /><sub><b>Perfil git Paulo Henrique</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a><br/></td>
   </tr>
 </table>
 </p>
