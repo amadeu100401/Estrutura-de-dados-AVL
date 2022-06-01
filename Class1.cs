@@ -80,9 +80,9 @@ namespace AVL
                     return new Node(id);
 
                 if (id < node.Id)
-                    node.LeftNode = InsertionTree(node.LeftNode, id);
+                    node.LeftNode = InsertionNode(node.LeftNode, id);
                 else if (id > node.Id)
-                    node.RightNode = InsertionTree(node.RightNode, id);
+                    node.RightNode = InsertionNode(node.RightNode, id);
                 else 
                     return node;
 
