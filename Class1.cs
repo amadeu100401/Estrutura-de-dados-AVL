@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AVL
 {
-    public class Node1
+    public class Node
     {
         public int Id;
         public int Height;
-        public Node1 LeftNode;
-        public Node1 RightNode;
-
-        public Node1(int id)
+        public Node RightNode;
+        public Node LeftNode;
+        
+        public Node(int id)
         {
             Id = id;
             Height = 1;
@@ -22,9 +22,9 @@ namespace AVL
 
      public class AVLTree
         {
-            public Node1 root;
+            public Node root;
 
-            int NodeHeight(Node1 node)
+            int NodeHeight(Node node)
             {
                 if (node is null)
                 {
@@ -34,7 +34,7 @@ namespace AVL
                 return node.Height;
             }
 
-            int Balance(Node1 node)
+            int Balance(Node node)
             {
                 if (node is null)
                 {
@@ -44,10 +44,10 @@ namespace AVL
                 return NodeHeight(node.LeftNode) - NodeHeight(node.RightNode);
             }
 
-            Node1 LeftRotate(Node1 p)
+            Node LeftRotate(Node p)
             {
-                Node1 pivot = p.RightNode;  
-                Node1 aux = pivot.LeftNode;
+                Node pivot = p.RightNode;  
+                Node aux = pivot.LeftNode;
 
                 pivot.LeftNode = p;
                 p.RightNode = aux;
@@ -58,10 +58,10 @@ namespace AVL
                 return pivot;
             }
 
-            Node1 RightRotate(Node1 p)
+            Node RightRotate(Node p)
             {
-                Node1 pivot = p.LeftNode;
-                Node1 aux = pivot.RightNode;
+                Node pivot = p.LeftNode;
+                Node aux = pivot.RightNode;
 
                 pivot.RightNode = p;
                 p.LeftNode = aux;
@@ -73,16 +73,16 @@ namespace AVL
 
             }
 
-            public Node1 InsertioTree(Node1 node, int id)
+            public Node InsertionNode(Node node, int id)
             {
 
                 if (node == null)
-                    return new Node1(id);
+                    return new Node(id);
 
                 if (id < node.Id)
-                    node.LeftNode = InsertioTree(node.LeftNode, id);
+                    node.LeftNode = InsertionTree(node.LeftNode, id);
                 else if (id > node.Id)
-                    node.RightNode = InsertioTree(node.RightNode, id);
+                    node.RightNode = InsertionTree(node.RightNode, id);
                 else 
                     return node;
 
@@ -112,20 +112,21 @@ namespace AVL
                 return node;
             }
 
-            public void ShowUpTree(Node1 node)
+            public void ShowUpTree(Node node)
             {
                 if (node != null)
                 {
                     if (node.Height - root.Height == 0)
                     {
                         Console.WriteLine($"Raiz da árvore: {node.Id}" + " ");
+                        Console.WriteLine("Filhos do lado esquerdo da raiz:");
                         ShowUpTree(node.LeftNode);
+                        Console.WriteLine("Filhos do lado direito da raiz:");
                         ShowUpTree(node.RightNode);
                     }
                     else
                     {
-                        Console.Write($"Nodo: {node.Id}" + " ");
-                        Console.WriteLine($" Nível do nodo: {root.Height - node.Height}");
+                        Console.WriteLine($"Nodo: {node.Id}" + " ");
                         ShowUpTree(node.LeftNode);
                         ShowUpTree(node.RightNode);
                     }
