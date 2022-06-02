@@ -44,7 +44,7 @@ namespace AVL
                 return NodeHeight(node.LeftNode) - NodeHeight(node.RightNode);
             }
 
-            Node LeftRotate(Node p)
+            Node LeftRotation(Node p)
             {
                 Node pivot = p.RightNode;  
                 Node aux = pivot.LeftNode;
@@ -58,7 +58,7 @@ namespace AVL
                 return pivot;
             }
 
-            Node RightRotate(Node p)
+            Node RightRotation(Node p)
             {
                 Node pivot = p.LeftNode;
                 Node aux = pivot.RightNode;
@@ -92,21 +92,21 @@ namespace AVL
 
 
                 if (b > 1 && id < node.LeftNode.Id)
-                    return RightRotate(node);
+                    return RightRotation(node);
 
                 if (b < -1 && id > node.RightNode.Id)
-                    return LeftRotate(node);
+                    return LeftRotation(node);
 
                 if (b > 1 && id > node.LeftNode.Id)
                 {
-                    node.LeftNode = LeftRotate(node.LeftNode);
-                    return RightRotate(node);
+                    node.LeftNode = LeftRotation(node.LeftNode);
+                    return RightRotation(node);
                 }
 
                 if (b < -1 && id < node.RightNode.Id)
                 {
-                    node.RightNode = RightRotate(node.RightNode);
-                    return LeftRotate(node);
+                    node.RightNode = RightRotation(node.RightNode);
+                    return LeftRotation(node);
                 }
 
                 return node;
@@ -119,9 +119,9 @@ namespace AVL
                     if (node.Height - root.Height == 0)
                     {
                         Console.WriteLine($"Raiz da árvore: {node.Id}" + " ");
-                        Console.WriteLine("Filhos do lado esquerdo da raiz:");
+                        Console.WriteLine("Nodos do lado esquerdo da raiz:");
                         ShowUpTree(node.LeftNode);
-                        Console.WriteLine("Filhos do lado direito da raiz:");
+                        Console.WriteLine("Nodos do lado direito da raiz:");
                         ShowUpTree(node.RightNode);
                     }
                     else
