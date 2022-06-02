@@ -90,12 +90,12 @@ namespace AVL
 
                 int b = Balance(node);
 
-
-                if (b > 1 && id < node.LeftNode.Id)
-                    return RightRotation(node);
-
                 if (b < -1 && id > node.RightNode.Id)
                     return LeftRotation(node);
+
+    
+                if (b > 1 && id < node.LeftNode.Id)
+                    return RightRotation(node);
 
                 if (b > 1 && id > node.LeftNode.Id)
                 {
@@ -118,6 +118,7 @@ namespace AVL
                 {
                     if (node.Height - root.Height == 0)
                     {
+                        Console.WriteLine(" ");
                         Console.WriteLine($"Raiz da árvore: {node.Id}" + " ");
                         Console.WriteLine("Nodos do lado esquerdo da raiz:");
                         ShowUpTree(node.LeftNode);
