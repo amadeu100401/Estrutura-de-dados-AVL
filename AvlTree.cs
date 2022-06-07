@@ -8,11 +8,11 @@ namespace AVL
 {
     public class Node
     {
-        public int Id;
-        public int Height;
-        public Node RightNode;
-        public Node LeftNode;
-        
+        public int Id { get; set;}
+        public int Height { get; set; }
+        public Node RightNode { get; set; }
+        public Node LeftNode { get; set; }
+
         public Node(int id)
         {
             Id = id;
@@ -73,43 +73,43 @@ namespace AVL
 
             }
 
-            public Node InsertionNode(Node node, int id)
+            public Node InsertionNode(Node n, int id)
             {
 
-                if (node == null)
+                if (n == null)
                     return new Node(id);
 
-                if (id < node.Id)
-                    node.LeftNode = InsertionNode(node.LeftNode, id);
-                else if (id > node.Id)
-                    node.RightNode = InsertionNode(node.RightNode, id);
+                if (id < n.Id)
+                    n.LeftNode = InsertionNode(n.LeftNode, id);
+                else if (id > n.Id)
+                    n.RightNode = InsertionNode(n.RightNode, id);
                 else 
-                    return node;
+                    return n;
 
-                node.Height = 1 + Math.Max(NodeHeight(node.LeftNode),NodeHeight(node.RightNode));
+                n.Height = 1 + Math.Max(NodeHeight(n.LeftNode),NodeHeight(n.RightNode));
 
-                int b = Balance(node);
+                int b = Balance(n);
 
-                if (b < -1 && id > node.RightNode.Id)
-                    return LeftRotation(node);
+                if (b < -1 && id > n.RightNode.Id)
+                    return LeftRotation(n);
 
     
-                if (b > 1 && id < node.LeftNode.Id)
-                    return RightRotation(node);
+                if (b > 1 && id < n.LeftNode.Id)
+                    return RightRotation(n);
 
-                if (b > 1 && id > node.LeftNode.Id)
+                if (b > 1 && id > n.LeftNode.Id)
                 {
-                    node.LeftNode = LeftRotation(node.LeftNode);
-                    return RightRotation(node);
+                    n.LeftNode = LeftRotation(n.LeftNode);
+                    return RightRotation(n);
                 }
 
-                if (b < -1 && id < node.RightNode.Id)
+                if (b < -1 && id < n.RightNode.Id)
                 {
-                    node.RightNode = RightRotation(node.RightNode);
-                    return LeftRotation(node);
+                    n.RightNode = RightRotation(n.RightNode);
+                    return LeftRotation(n);
                 }
 
-                return node;
+                return n;
             }
 
             public void ShowUpTree(Node node)
@@ -122,14 +122,25 @@ namespace AVL
                         Console.WriteLine($"Raiz da árvore: {node.Id}" + " ");
                         Console.WriteLine("Nodos do lado esquerdo da raiz:");
                         ShowUpTree(node.LeftNode);
+                        Console.WriteLine("---------------------------------------");
                         Console.WriteLine("Nodos do lado direito da raiz:");
                         ShowUpTree(node.RightNode);
                     }
                     else
                     {
-                        Console.WriteLine($"Nodo: {node.Id}" + " ");
-                        ShowUpTree(node.LeftNode);
-                        ShowUpTree(node.RightNode);
+                        Console.Write($"Nodo: {node.Id}" + " ");
+                        Console.WriteLine(" ");
+                        if (node.LeftNode is not null)
+                        {
+                            Console.WriteLine($"Filho esquerdo do nodo {node.Id}: ");
+                            ShowUpTree(node.LeftNode);
+                        }
+                        if (node.RightNode is not null)
+                        {
+                            Console.WriteLine($"Filho direito do nodo {node.Id}: ");
+                            ShowUpTree(node.RightNode);
+                        }
+
                     }
                 }
             }
