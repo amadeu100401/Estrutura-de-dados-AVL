@@ -28,6 +28,7 @@ Random randNum = new Random();
 //tree.root = tree.InsertionNode(tree.root, 10);
 //tree.root = tree.InsertionNode(tree.root, 4);
 
+//Teste 4
 //tree.root = tree.InsertionNode(tree.root, 20);
 //tree.root = tree.InsertionNode(tree.root, 10);
 //tree.root = tree.InsertionNode(tree.root, 30);
@@ -37,6 +38,18 @@ Random randNum = new Random();
 //tree.root = tree.InsertionNode(tree.root, 12);
 //tree.root = tree.InsertionNode(tree.root, 29);
 //tree.root = tree.InsertionNode(tree.root, 28);
+
+//Teste 5
+//tree.root = tree.InsertionNode(tree.root, 30);
+//tree.root = tree.InsertionNode(tree.root, 45);
+//tree.root = tree.InsertionNode(tree.root, 29);
+//tree.root = tree.InsertionNode(tree.root, 20);
+//tree.root = tree.InsertionNode(tree.root, 19);
+
+//Teste 6
+//tree.root = tree.InsertionNode(tree.root, 1);
+//tree.root = tree.InsertionNode(tree.root, 2);
+//tree.root = tree.InsertionNode(tree.root, 3);
 
 Console.WriteLine("Informe o número de nodos da árvore: ");
 string aux = Console.ReadLine();
